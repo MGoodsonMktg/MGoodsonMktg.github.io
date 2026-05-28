@@ -287,9 +287,13 @@
 
   .about-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 5rem;
+    grid-template-columns: 1.1fr 1fr 0.85fr;
+    gap: 3.5rem;
     align-items: start;
+  }
+
+  @media (max-width: 1024px) {
+    .about-grid { grid-template-columns: 1fr 1fr; }
   }
 
   .about-text p {
@@ -574,6 +578,31 @@
   }
 
   /* WRITING SAMPLES */
+  .writing-card-thumb {
+    background: var(--white);
+    border: 1px solid var(--border-soft);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .writing-card-thumb:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  }
+
+  .writing-card-thumb-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .writing-card-thumb-body {
+    padding: 1.5rem;
+  }
+
   .writing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -911,7 +940,7 @@
 <section class="hero" id="home">
   <div class="hero-content">
     <div>
-      <div class="hero-eyebrow">Digital Marketing Professional</div>
+      <div class="hero-eyebrow">Digital Marketing and Communications Professional</div>
       <h1>Storyteller.<br><em>Strategist.</em><br>Results-Driver.</h1>
       <p class="hero-desc">15+ years of integrated marketing experience across entertainment, nonprofit, B2B, and DTC environments, building campaigns, communities, and brands that genuinely connect with people.</p>
       <div class="hero-ctas">
@@ -986,21 +1015,23 @@
             <div class="timeline-desc">Owned all marketing, PR, donor communications, social media, web content, and events for a scholarship-focused nonprofit. Reported directly to Executive Director.</div>
           </div>
         </div>
-        <div style="margin-top: 2rem;">
-          <p class="skills-heading">Core Competencies</p>
-          <ul class="skills-list">
-            <li class="skill-item"><span class="skill-dot"></span>Email & Lifecycle Marketing (HubSpot, Customer.io, Klaviyo, Constant Contact)</li>
-            <li class="skill-item"><span class="skill-dot"></span>Integrated Campaign Strategy & Execution</li>
-            <li class="skill-item"><span class="skill-dot"></span>PR & Media Relations</li>
-            <li class="skill-item"><span class="skill-dot"></span>Social Media Management & Community Building</li>
-            <li class="skill-item"><span class="skill-dot"></span>Brand Storytelling & Copywriting</li>
-            <li class="skill-item"><span class="skill-dot"></span>A/B Testing & Performance Analytics</li>
-            <li class="skill-item"><span class="skill-dot"></span>Cross-Functional Team Leadership</li>
-            <li class="skill-item"><span class="skill-dot"></span>Influencer & Ambassador Program Management</li>
-            <li class="skill-item"><span class="skill-dot"></span>SEO & Web Content Management</li>
-            <li class="skill-item"><span class="skill-dot"></span>Donor & Nonprofit Communications</li>
-          </ul>
-        </div>
+      </div>
+      <div>
+        <p class="skills-heading">Core Competencies</p>
+        <ul class="skills-list">
+            <li class="skill-item"><span class="skill-dot"></span>Integrated Marketing &amp; Content Strategy</li>
+            <li class="skill-item"><span class="skill-dot"></span>Email &amp; Lifecycle Marketing (Klaviyo, Movio, Constant Contact, MailChimp, Customer.io)</li>
+            <li class="skill-item"><span class="skill-dot"></span>CRM (Salesforce, HubSpot)</li>
+            <li class="skill-item"><span class="skill-dot"></span>GA4 / Google Analytics, Agency Analytics</li>
+            <li class="skill-item"><span class="skill-dot"></span>Web Marketing (SEO, HTML, CMS, WordPress, Wix)</li>
+            <li class="skill-item"><span class="skill-dot"></span>Social &amp; Search (Meta, Instagram, X, Google Keywords)</li>
+            <li class="skill-item"><span class="skill-dot"></span>Content Creation: Copywriting, Editing, Adobe, Canva, Figma</li>
+            <li class="skill-item"><span class="skill-dot"></span>Project Management (Basecamp, Asana, Smartsheet)</li>
+            <li class="skill-item"><span class="skill-dot"></span>LLM / AI (Claude, ChatGPT, Prompt Engineering)</li>
+            <li class="skill-item"><span class="skill-dot"></span>PR &amp; Media Relations</li>
+            <li class="skill-item"><span class="skill-dot"></span>Brand Storytelling &amp; Copywriting</li>
+            <li class="skill-item"><span class="skill-dot"></span>Donor &amp; Nonprofit Communications</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -1095,51 +1126,6 @@
         </div>
       </div>
 
-
-      <p style="font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">FilmFrog Marketing — Spotlight Theater</p>
-      <div class="portfolio-grid" style="margin-bottom: 3rem;">
-        <div class="portfolio-card">
-          <div class="portfolio-card-img">
-            <img src="Socialpost_FilmFrogClient_SpotlightTheater.png" alt="Spotlight Theater D&D Post" onerror="this.parentElement.innerHTML='<span class=portfolio-card-img-placeholder>📱</span>'">
-          </div>
-          <div class="portfolio-card-body">
-            <div class="portfolio-card-tag">Press Amplification — Facebook</div>
-            <div class="portfolio-card-title">Dungeons &amp; Dragons — Rotten Tomatoes Score Post</div>
-            <div class="portfolio-card-desc">Pre-opening social post amplifying D&amp;D: Honor Among Thieves' strong Rotten Tomatoes scores to drive ticket sales ahead of Thursday early shows — a timely credibility-to-conversion play.</div>
-            <div class="portfolio-card-meta"><span class="portfolio-card-org">FilmFrog Marketing / Spotlight Theater of Hornell</span></div>
-          </div>
-        </div>
-      </div>
-
-      <p style="font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">FilmFrog Marketing — Angel Studios</p>
-      <div class="portfolio-grid" style="margin-bottom: 3rem;">
-        <div class="portfolio-card">
-          <div class="portfolio-card-img">
-            <img src="FilmFrog_ClientAngelStudios_PostScreeningSurvey_.png" alt="Angel Studios SKETCH Survey" onerror="this.parentElement.innerHTML='<span class=portfolio-card-img-placeholder>📱</span>'">
-          </div>
-          <div class="portfolio-card-body">
-            <div class="portfolio-card-tag">Audience Research — Post-Screening Survey</div>
-            <div class="portfolio-card-title">Angel Studios SKETCH — Post-Screening Guest Survey</div>
-            <div class="portfolio-card-desc">Post-screening audience survey developed for Angel Studios' film SKETCH, gathering guest feedback on the film and the studio's "Pay It Forward" distribution model to inform release strategy.</div>
-            <div class="portfolio-card-meta"><span class="portfolio-card-org">FilmFrog Marketing / Angel Studios</span></div>
-          </div>
-        </div>
-      </div>
-
-      <p style="font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">Dallas International Film Festival</p>
-      <div class="portfolio-grid" style="margin-bottom: 3rem;">
-        <div class="portfolio-card">
-          <div class="portfolio-card-img">
-            <img src="DallasInternationalFilmFestival2022_EmailSample.png" alt="DIFF 2022 Email" onerror="this.parentElement.innerHTML='<span class=portfolio-card-img-placeholder>✉</span>'">
-          </div>
-          <div class="portfolio-card-body">
-            <div class="portfolio-card-tag">Festival Campaign</div>
-            <div class="portfolio-card-title">DIFF 2022 — Full Slate On Sale Announcement</div>
-            <div class="portfolio-card-desc">Festival-wide email announcing the full 2022 film slate with Gala and Premiere Series highlights, driving ticket purchases and building audience excitement.</div>
-            <div class="portfolio-card-meta"><span class="portfolio-card-org">Dallas International Film Festival</span></div>
-          </div>
-        </div>
-      </div>
 
       <p style="font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">Studio Movie Grill</p>
       <div class="portfolio-grid">
@@ -1635,7 +1621,7 @@
       </div>
 
       <p style="font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">Additional Web Projects</p>
-      <div class="portfolio-grid">
+      <div class="portfolio-grid" style="margin-bottom: 3rem;">
         <div class="portfolio-card">
           <div class="portfolio-card-img">
             <img src="YPOFTWorth_.png" alt="YPO Fort Worth Website" onerror="this.parentElement.innerHTML='<span class=portfolio-card-img-placeholder>🌐</span>'">
@@ -1656,6 +1642,21 @@
             <div class="portfolio-card-title">Expand Studio — Homepage Design</div>
             <div class="portfolio-card-desc">Homepage design concept for Expand Studio featuring sophisticated editorial photography, clean typography, and a refined color palette aligned with the brand's premium positioning.</div>
             <div class="portfolio-card-meta"><span class="portfolio-card-org">Expand Studio</span></div>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">Personal Portfolio — Built with Claude &amp; GitHub</p>
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <div class="portfolio-card-img">
+            <img src="goodsonportfolio.png" alt="Goodson Portfolio Website" onerror="this.parentElement.innerHTML='<span class=portfolio-card-img-placeholder>🌐</span>'">
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-tag">Personal Portfolio — HTML / GitHub</div>
+            <div class="portfolio-card-title">Michele Goodson — Digital Marketing Portfolio Site</div>
+            <div class="portfolio-card-desc">This portfolio website, built from scratch using Claude AI and deployed via GitHub — a first-time hands-on experience with AI-assisted web development, demonstrating initiative in learning emerging tools and applying them to real-world creative and professional work.</div>
+            <div class="portfolio-card-meta"><span class="portfolio-card-org">Personal Project · Claude + GitHub</span></div>
           </div>
         </div>
       </div>
@@ -2200,6 +2201,51 @@
       <h2 class="section-title">Writing Samples <em>&</em> Press Coverage</h2>
     </div>
 
+    <p style="font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">Published Writing — International Documentary Association</p>
+    <div class="writing-grid" style="margin-bottom: 3rem;">
+      <a href="https://www.documentary.org/column/festival-focus-afi-dallas-international-film-festival" target="_blank" style="text-decoration: none;">
+        <div class="writing-card-thumb">
+          <img src="IDA_AFIDallasReview.png" alt="IDA Festival Focus: AFI Dallas" class="writing-card-thumb-img">
+          <div class="writing-card-thumb-body">
+            <div class="writing-type">Film Criticism — Published Article</div>
+            <div class="writing-title">Festival Focus: AFI Dallas International Film Festival</div>
+            <div class="writing-excerpt">Published in the International Documentary Association's Documentary Magazine — a festival review and critical essay on the AFI Dallas International Film Festival. By Michele Goodson · July 1, 2007</div>
+            <div class="writing-meta" style="display: flex; justify-content: space-between; align-items: center;">
+              <span>International Documentary Association · Documentary Magazine</span>
+              <span class="portfolio-card-link">Read Article ↗</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.documentary.org/online-feature/docs-make-diff-erence-dallas-fest" target="_blank" style="text-decoration: none;">
+        <div class="writing-card-thumb">
+          <img src="IDA_Docs.png" alt="IDA Docs Make a DIFF-erence" class="writing-card-thumb-img">
+          <div class="writing-card-thumb-body">
+            <div class="writing-type">Documentary Criticism — Published Article</div>
+            <div class="writing-title">Docs Make a DIFF-erence at Dallas Fest</div>
+            <div class="writing-excerpt">Published feature for the International Documentary Association examining the standout documentaries at DIFF, exploring themes of resilience, justice, and the human spirit across the festival's documentary slate. By Michele Goodson</div>
+            <div class="writing-meta" style="display: flex; justify-content: space-between; align-items: center;">
+              <span>International Documentary Association · Documentary Magazine</span>
+              <span class="portfolio-card-link">Read Article ↗</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <p style="font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">Press Release — See-Through Films / Karga Seven Pictures</p>
+    <div class="writing-grid" style="margin-bottom: 3rem;">
+      <div class="writing-card">
+        <div class="writing-type">Corporate Press Release — Entertainment</div>
+        <div class="writing-title">Karga Seven Pictures — Major Executive Postings Announcement</div>
+        <div class="writing-excerpt">Written and distributed press release announcing major creative executive promotions at Karga Seven Pictures, covering new roles in both Los Angeles and Istanbul for the multinational non-fiction television production company behind Booze Traveler and Hunting Hitler.</div>
+        <div class="writing-meta" style="display: flex; justify-content: space-between; align-items: center;">
+          <span>See-Through Films / Karga Seven Pictures · January 2017</span>
+          <a href="KARGA_7_FINAL_announces_new_executives_January_2017.pdf" target="_blank" class="portfolio-card-link">View PDF</a>
+        </div>
+      </div>
+    </div>
+
     <p style="font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">Press Coverage — See-Through Films / Festival Publicity</p>
     <div class="writing-grid" style="margin-bottom: 3rem;">
       <div class="writing-card">
@@ -2227,19 +2273,6 @@
         <div class="writing-meta" style="display: flex; justify-content: space-between; align-items: center;">
           <span>See-Through Films · TIFF 2015</span>
           <a href="UrbanHymn_PressClippings_TIFF2015.pdf" target="_blank" class="portfolio-card-link">View PDF</a>
-        </div>
-      </div>
-    </div>
-
-    <p style="font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem;">Press Coverage — McKinney Education Foundation</p>
-    <div class="writing-grid" style="margin-bottom: 3rem;">
-      <div class="writing-card">
-        <div class="writing-type">Nonprofit Press Coverage</div>
-        <div class="writing-title">McKinney Education Foundation — Local Media Coverage</div>
-        <div class="writing-excerpt">Generated local media coverage for MEF initiatives including scholarship awards, community events, and fundraising programs, with placements in McKinney Courier-Gazette and Star Local Media.</div>
-        <div class="writing-meta" style="display: flex; justify-content: space-between; align-items: center;">
-          <span>McKinney Education Foundation · 2010–2014</span>
-          <a href="McKinney_Education_Foundation_Press_Samples_subscription_barrier.png" target="_blank" class="portfolio-card-link">View Sample</a>
         </div>
       </div>
     </div>
